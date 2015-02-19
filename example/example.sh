@@ -11,5 +11,8 @@
    export user=fa@csdada*%^&*%&
 
 
+pwd="vshugvshcfvhscf"
+
+
 
 # END

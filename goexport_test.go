@@ -16,12 +16,20 @@ func TestDo(t *testing.T) {
 		t.Errorf(msgFail, "Do", nil, err)
 	}
 
-	if v1 := os.Getenv("K"); v1 != "V" {
-		t.Errorf(msgFail, "Do", "V", v1)
+	if v := os.Getenv("K"); v != "V" {
+		t.Errorf(msgFail, "Do", "V", v)
 	}
 
-	if v1 := os.Getenv("FOO"); v1 != "BAR" {
-		t.Errorf(msgFail, "Do", "BAR", v1)
+	if v := os.Getenv("FOO"); v != "BAR" {
+		t.Errorf(msgFail, "Do", "BAR", v)
+	}
+
+	if v := os.Getenv("user"); v != "fa@csdada*%^&*%&" {
+		t.Errorf(msgFail, "Do", "fa@csdada*%^&*%&", v)
+	}
+
+	if v := os.Getenv("pwd"); v != "vshugvshcfvhscf" {
+		t.Errorf(msgFail, "Do", "vshugvshcfvhscf", v)
 	}
 
 }

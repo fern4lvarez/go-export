@@ -50,6 +50,7 @@ func handleLine(line string) {
 	validKV := regexp.MustCompile(`^[(\w|\W)]+\=[(\w|\W)]+$`)
 	if validKV.MatchString(line) {
 		kv := strings.SplitN(line, "=", 2)
-		os.Setenv(kv[0], kv[1])
+		k, v := kv[0], strings.Trim(kv[1], `"`)
+		os.Setenv(k, v)
 	}
 }
