@@ -14,4 +14,5 @@ func main() {
 
 	fmt.Println("K", os.Getenv("K"))
 	fmt.Println("FOO", os.Getenv("FOO"))
+	fmt.Println("user", os.Getenv("user"))
 }

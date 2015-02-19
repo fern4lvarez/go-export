@@ -43,6 +43,7 @@ func main() {
   // Output:
   // K V
   // FOO BAR
+  // user fa@csdada*%^&*%&
 }
 ```
 

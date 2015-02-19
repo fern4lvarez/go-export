@@ -6,7 +6,9 @@
    export     K=V    
 
 
-   FOO=BAR    
+   FOO=BAR
+
+   export user=fa@csdada*%^&*%&
 
 
 

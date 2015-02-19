@@ -47,7 +47,7 @@ func handleLine(line string) {
 	line = strings.TrimPrefix(line, "export ")
 	line = strings.TrimSpace(line)
 
-	validKV := regexp.MustCompile(`^[a-zA-Z0-9]+\=[a-zA-Z0-9]+$`)
+	validKV := regexp.MustCompile(`^[(\w|\W)]+\=[(\w|\W)]+$`)
 	if validKV.MatchString(line) {
 		kv := strings.SplitN(line, "=", 2)
 		os.Setenv(kv[0], kv[1])
