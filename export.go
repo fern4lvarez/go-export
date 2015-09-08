@@ -2,7 +2,7 @@
 goexport reads a file and exports
 all key-value bash format lines to the env
 */
-package goexport
+package export
 
 import (
 	"bufio"

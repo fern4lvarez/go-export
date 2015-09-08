@@ -2,15 +2,14 @@
 
 [Documentation online](http://godoc.org/github.com/fern4lvarez/goexport)
 
-**goexport** reads a given file path and exports all key-value bash formatlines to the env
+**go-export** reads a given file path and exports all key-value bash format lines to the env
 
-## Install (with GOPATH set on your machine)
-----------
+## Install
 
-* Step 1: Get the `goexport` package
+* Step 1: Get the `go-export` package
 
 ```
-go get github.com/fern4lvarez/goexport
+go get github.com/fern4lvarez/go-export
 ```
 
 * Step 2 (Optional): Run tests
@@ -20,8 +19,8 @@ $ go test -v -cover ./...
 ```
 
 ##Usage
-----------
-```
+
+```go
 package main
 
 import (
@@ -29,25 +28,33 @@ import (
   "os"
   "path/filepath"
 
-  export "github.com/fern4lvarez/goexport"
+  "github.com/fern4lvarez/go-export"
 )
 
-func main() {
-  exampleFile := filepath.Join(os.Getenv("PWD"), "example", "example.sh")
-  export.Do(exampleFile)
+func ExampleDo() {
+	exampleFile := filepath.Join(os.Getenv("PWD"), "example", "example.sh")
+	err := Do(exampleFile)
+	if err != nil {
+		fmt.Println(err)
+	}
 
-  fmt.Println("K", os.Getenv("K"))
-  fmt.Println("FOO", os.Getenv("FOO"))
+	fmt.Println("K", os.Getenv("K"))
+	fmt.Println("FOO", os.Getenv("FOO"))
+	fmt.Println("user", os.Getenv("user"))
+	fmt.Println("pwd", os.Getenv("pwd"))
 }
 
-  // Output:
-  // K V
-  // FOO BAR
-  // user fa@csdada*%^&*%&
-  // pwd vshugvshcfvhscf
+
+func main() {
+	ExampleDo()
+  	// Output:
+  	// K V
+  	// FOO BAR
+  	// user fa@csdada*%^&*%&
+  	// pwd vshugvshcfvhscf
 }
 ```
 
 ##License
 ----------
-goexport is MIT licensed.
+go-export is MIT licensed.
