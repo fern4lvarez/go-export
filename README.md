@@ -1,6 +1,4 @@
-# goexport
-
-[Documentation online](http://godoc.org/github.com/fern4lvarez/goexport)
+# go-export [![GoDoc](https://godoc.org/github.com/fern4lvarez/go-export?status.png)](http://godoc.org/github.com/fern4lvarez/go-export)
 
 **go-export** reads a given file path and exports all key-value bash format lines to the env
 
@@ -55,6 +53,6 @@ func main() {
 }
 ```
 
-##License
-----------
+## License
+
 go-export is MIT licensed.

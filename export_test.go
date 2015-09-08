@@ -57,5 +57,4 @@ func ExampleDo() {
 	// FOO BAR
 	// user fa@csdada*%^&*%&
 	// pwd vshugvshcfvhscf
-
 }
